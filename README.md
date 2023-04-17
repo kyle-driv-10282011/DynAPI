@@ -35,8 +35,8 @@ clone to local and ```go run DynAPI.go```
 
 * DynAPI.go
 * api-routing-config.json
-	*JSON Array
-        *JSON Object
+	* JSON Array
+        * JSON Object
             * URL_path (STRING)
                 * Routing path for API request http://ip:port/<URL_path>
                 * Must include \ at beginning
