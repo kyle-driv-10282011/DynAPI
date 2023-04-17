@@ -56,24 +56,27 @@ clone to local and ```go run DynAPI.go```
             * The default column for DELETE queries
 
 
-```    
-{
-    "URL_path": "/thing",
-    "SQL_GET_query": "select * from table_thing",
-    "SQL_GET_key_field": "ID",
-    "SQL_POST_table": "table_thing",
-    "POST_fields": ["thing_name","thing_description","thing_size","thing_age"],
-    "SQL_DELETE_table": "list_thing",
-    "DELETE_fields":["id"]
-},{
-    "URL_path": "/thing2",
-    "SQL_GET_query": "select * from table_thing2",
-    "SQL_GET_key_field": "ID",
-    "SQL_POST_table": "table_thing2",
-    "POST_fields": ["thing_name","thing_description","thing_size","thing_age"],
-    "SQL_DELETE_table": "list_thing2",
-    "DELETE_fields":["id"]
-},
+```   
+[ 
+    {
+        "URL_path": "/thing",
+        "SQL_GET_query": "select * from table_thing",
+        "SQL_GET_key_field": "ID",
+        "SQL_POST_table": "table_thing",
+        "POST_fields": ["thing_name","thing_description","thing_size","thing_age"],
+        "SQL_DELETE_table": "list_thing",
+        "DELETE_fields":["id"]
+    },
+    {
+        "URL_path": "/thing2",
+        "SQL_GET_query": "select * from table_thing2",
+        "SQL_GET_key_field": "ID",
+        "SQL_POST_table": "table_thing2",
+        "POST_fields": ["thing_name","thing_description","thing_size","thing_age"],
+        "SQL_DELETE_table": "list_thing2",
+        "DELETE_fields":["id"]
+    }
+]
 
 ```
         
