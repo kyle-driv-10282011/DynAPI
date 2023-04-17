@@ -94,7 +94,7 @@ clone to local and ```go run DynAPI.go```
 * ServerTimeout
     * Should always be false
 
-``
+```
 {
 	"Driver":"postgres",
 	"User":"postgres",
