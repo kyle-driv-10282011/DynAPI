@@ -31,12 +31,12 @@ import (
 ```
 clone to local and ```go run DynAPI.go```
 
-## Files
+# Files #
 
-# DynAPI.go #
+## DynAPI.go ##
 * Dynamic GO code to read and react to api-routing-config.json
 
-# api-routing-config.json #
+## api-routing-config.json ##
 * JSON Array
     * JSON Object
         * URL_path (STRING)
@@ -81,7 +81,7 @@ clone to local and ```go run DynAPI.go```
 ```
         
 
-# db.json #
+## db.json ##
 * Used for connection details for database connectivity
 
     * Driver
