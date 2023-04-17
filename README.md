@@ -84,18 +84,18 @@ clone to local and ```go run DynAPI.go```
 # db.json #
 * Used for connection details for database connectivity
 
-* Driver
-    * The Driver to be used to connect to database server
-* User
-    * The User to be used to connect to database server
-* Pass
-    * The Password to be used to connect to database server
-* ServerIP
-    * The IP or Fully Qualified Domain Name of the database server
-* ServerPort
-    * The Port of the database server
-* ServerTimeout
-    * Should always be false
+    * Driver
+        * The Driver to be used to connect to database server
+    * User
+        * The User to be used to connect to database server
+    * Pass
+        * The Password to be used to connect to database server
+    * ServerIP
+        * The IP or Fully Qualified Domain Name of the database server
+    * ServerPort
+        * The Port of the database server
+    * ServerTimeout
+        * Should always be false
 
 ```
 {
