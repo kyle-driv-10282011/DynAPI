@@ -34,24 +34,25 @@ clone to local and ```go run DynAPI.go```
 ## Files
 
 # DynAPI.go #
+
 # api-routing-config.json #
-	* JSON Array
-        * JSON Object
-            * URL_path (STRING)
-                * Routing path for API request http://ip:port/<URL_path>
-                * Must include \ at beginning
-            * SQL_GET_query (STRING)
-                * The SQL query used for GET requests
-            * SQL_GET_key_field (STRING)
-                * The default column for GET queries (order by, where, etc)
-            * SQL_POST_table (STRING)
-                * The table used for POST requests (INSERT)
-            * POST_fields (OBJECT[])
-                * Fields required for POST requests to be valid, all fields must be included in request and cannot be optional
-            * SQL_DELETE_table (STRING)
-                * Table for DELETE requests
-            * DELETE_fields (OBJECT[])
-                * The default column for DELETE queries
+* JSON Array
+    * JSON Object
+        * URL_path (STRING)
+            * Routing path for API request http://ip:port/<URL_path>
+            * Must include \ at beginning
+        * SQL_GET_query (STRING)
+            * The SQL query used for GET requests
+        * SQL_GET_key_field (STRING)
+            * The default column for GET queries (order by, where, etc)
+        * SQL_POST_table (STRING)
+            * The table used for POST requests (INSERT)
+        * POST_fields (OBJECT[])
+            * Fields required for POST requests to be valid, all fields must be included in request and cannot be optional
+        * SQL_DELETE_table (STRING)
+            * Table for DELETE requests
+        * DELETE_fields (OBJECT[])
+            * The default column for DELETE queries
 
 
 ```    
