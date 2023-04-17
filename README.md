@@ -34,6 +34,7 @@ clone to local and ```go run DynAPI.go```
 ## Files
 
 # DynAPI.go #
+* Dynamic GO code to read and react to #### api-routing-config.json #### 
 
 # api-routing-config.json #
 * JSON Array
