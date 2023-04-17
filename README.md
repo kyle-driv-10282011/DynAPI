@@ -36,8 +36,8 @@ clone to local and ```go run DynAPI.go```
 * DynAPI.go
 * api-routing-config.json
 	*JSON Array
-		**URL_path
-		**Routing path for API request http://ip:port/<URL_path>
+		* URL_path
+			* Routing path for API request http://ip:port/<URL_path>
 * db.json
 
 
@@ -108,6 +108,5 @@ clone to local and ```go run DynAPI.go```
         "SQL_GET_key_field": "lm.ID"
     }
 ]
-```
 
 
