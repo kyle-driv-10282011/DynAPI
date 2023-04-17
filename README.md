@@ -34,7 +34,7 @@ clone to local and ```go run DynAPI.go```
 ## Files
 
 # DynAPI.go #
-* Dynamic GO code to read and react to #### api-routing-config.json #### 
+* Dynamic GO code to read and react to api-routing-config.json
 
 # api-routing-config.json #
 * JSON Array
@@ -78,7 +78,34 @@ clone to local and ```go run DynAPI.go```
 ```
         
 
-* db.json
+# db.json #
+* Used for connection details for database connectivity
+
+* Driver
+    * The Driver to be used to connect to database server
+* User
+    * The User to be used to connect to database server
+* Pass
+    * The Password to be used to connect to database server
+* ServerIP
+    * The IP or Fully Qualified Domain Name of the database server
+* ServerPort
+    * The Port of the database server
+* ServerTimeout
+    * Should always be false
+
+``
+{
+	"Driver":"postgres",
+	"User":"postgres",
+	"Pass":"supersecretpassword",
+	"DatabaseName":"DATABASENAME",
+	"ServerIP":"IP/FQDN",
+	"ServerPort":"5432",
+	"ServerTimeout":false
+}
+```
+
 
 
 
