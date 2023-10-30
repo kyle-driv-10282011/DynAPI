@@ -1,59 +1,69 @@
 [
     {
-        "URL_path": "/material",
-        "SQL_GET_query": "select * from list_material",
+        "URL_path": "/role",
+        "SQL_GET_query": "select * from list_role",
         "SQL_GET_key_field": "ID",
-        "SQL_POST_table": "list_material",
-        "POST_fields": ["material_name","material_cost","material_currency","material_quantity_type"],
-        "SQL_DELETE_table": "list_material",
+        "SQL_POST_table": "list_role",
+        "POST_fields": ["role_name","role_description", "role_number","role_weight"],
+        "SQL_DELETE_table": "list_role",
+        "DELETE_fields":["id"]
+    },    
+    {
+        "URL_path": "/asset",
+        "SQL_GET_query": "select * from list_asset",
+        "SQL_GET_key_field": "ID",
+        "SQL_POST_table": "list_asset",
+        "POST_fields": ["asset_name","asset_type_id"],
+        "SQL_DELETE_table": "list_asset",
+        "DELETE_fields":["id"]
+    },    
+    {
+        "URL_path": "/asset-type",
+        "SQL_GET_query": "select * from list_asset_type",
+        "SQL_GET_key_field": "ID",
+        "SQL_POST_table": "list_asset_type",
+        "POST_fields": ["type_name","type_description"],
+        "SQL_DELETE_table": "list_asset_type",
+        "DELETE_fields":["id"]
+    },   
+    {
+        "URL_path": "/economy",
+        "SQL_GET_query": "select * from list_economy",
+        "SQL_GET_key_field": "ID",
+        "SQL_POST_table": "list_economy",
+        "POST_fields": ["economy_score","date_id"]
+    }, 
+    {
+        "URL_path": "/game",
+        "SQL_GET_query": "select * from list_game",
+        "SQL_GET_key_field": "ID",
+        "SQL_POST_table": "list_game",
+        "POST_fields": ["game_name","owner_id"],
+        "SQL_DELETE_table": "list_game",
         "DELETE_fields":["id"]
     },
     {
-        "URL_path": "/currency",
-        "SQL_GET_query": "select * from list_currency",
+        "URL_path": "/player-roles-from-session-token",
+        "SQL_GET_query": "select role_id from relation_player_role where player_id = (select player_id from list_session where session_token = '$_sessiontoken_$')",
         "SQL_GET_key_field": "ID",
-        "SQL_POST_table": "list_currency",
-        "POST_fields": ["currency_name","currency_iso","currency_symbol","usd_conversion"],
-        "SQL_DELETE_table": "list_currency",
-        "DELETE_fields":["id"]
+        "SQL_GET_Variables": ["$_sessiontoken_$"]
     },
     {
-        "URL_path": "/quantitytype",
-        "SQL_GET_query": "select * from list_quantity_type",
+        "URL_path": "/player-id-from-session-token",
+        "SQL_GET_query": "select player_id from list_session where session_token = '$_sessiontoken_$'",
         "SQL_GET_key_field": "ID",
-        "SQL_POST_table": "list_quantity_type",
-        "POST_fields": ["type_name"],
-        "SQL_DELETE_table": "list_quantity_type",
-        "DELETE_fields":["id"]
+        "SQL_GET_Variables": ["$_sessiontoken_$"]
     },
     {
-        "URL_path": "/qualitytype",
-        "SQL_GET_query": "select * from list_quality_type",
+        "URL_path": "/asset-permissions-from-session-token",
+        "SQL_GET_query": "select role_id from relation_player_role where player_id = (select player_id from list_session where session_token = '$_sessiontoken_$')",
         "SQL_GET_key_field": "ID",
-        "SQL_POST_table": "list_quality_type",
-        "POST_fields": ["type_name"],
-        "SQL_DELETE_table": "list_quality_type",
-        "DELETE_fields":["id"]
+        "SQL_GET_Variables": ["$_sessiontoken_$"]
     },
     {
-        "URL_path": "/product",
-        "SQL_GET_query": "select * from list_product",
+        "URL_path": "/games-from-session-token",
+        "SQL_GET_query": "select * from list_game where owner_id = (select player_id from list_session where session_token = '$_sessiontoken_$')",
         "SQL_GET_key_field": "ID",
-        "SQL_POST_table": "list_product",
-        "POST_fields": ["product_name"],
-        "SQL_DELETE_table": "list_product",
-        "DELETE_fields":["id"]
-    },
-    {
-        "URL_path": "/businesstitlehierarchy",
-        "SQL_GET_query": "select * from list_business_title_hierarchy",
-        "SQL_GET_key_field": "ID"
-    },
-    {
-        "URL_path": "/materialfull",
-        "SQL_GET_query": "select lm.id,lm.material_name,lm.material_cost,lm.material_cost * lc.usd_conversion as cost_converted, lm.material_currency,lm.material_quantity_type,lc.currency_name,lc.currency_iso,lc.currency_symbol,lc.usd_conversion,lqt.type_name from list_material as lm join list_currency as lc on lm.material_currency = lc.ID join list_quantity_type as lqt on lm.material_quantity_type = lqt.ID",
-        "SQL_GET_key_field": "lm.ID"
-    }
+        "SQL_GET_Variables": ["$_sessiontoken_$"]
+    }  
 ]
-
-
